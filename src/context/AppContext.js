@@ -17,7 +17,7 @@ const ProviderContext = ({ children }) => {
 
     try {
       setLoading(true);
-      let data = await fetch("http://localhost:3000/user", {
+      let data = await fetch("https://chat-back-end.vercel.app/user", {
         method: "POST",
         body: JSON.stringify({ name: name }),
         headers: { "Content-Type": "application/json" },
@@ -36,7 +36,7 @@ const ProviderContext = ({ children }) => {
   const addMessage = async (message) => {
     try {
       setLoading(true);
-      let data = await fetch("http://localhost:3000/message", {
+      let data = await fetch("https://chat-back-end.vercel.app/message", {
         method: "POST",
         body: JSON.stringify({ user: currentId, message: message }),
         headers: { "Content-Type": "application/json" },
@@ -59,11 +59,11 @@ const ProviderContext = ({ children }) => {
     async function apiCall() {
       try {
         setLoading(true);
-        let dataMsg = await fetch("http://localhost:3000/message");
+        let dataMsg = await fetch("https://chat-back-end.vercel.app/message");
         let responseMsg = await dataMsg.json();
         setMessages(responseMsg.body);
 
-        let dataUser = await fetch("http://localhost:3000/user");
+        let dataUser = await fetch("https://chat-back-end.vercel.app/user");
         let responseUser = await dataUser.json();
 
         setUsers(responseUser);
