@@ -1,0 +1,69 @@
+
+.message {
+    display: flex;
+    align-items: center;
+    padding: 0.7em 0em ;
+  }
+  
+.message i {
+  font-size: 2.7em;
+  color: white;
+  padding-bottom: 0.3em;
+  padding-right: 0.2em;
+}
+
+.message .fa-trash-can{
+  font-size: 1.5em;
+}
+
+.message-p {
+  max-width: 80%;
+  margin-bottom: 12px;
+  line-height: 24px;
+  padding:8px 16px;
+  border-radius: 15px;
+  position: relative;
+  color: white;
+  text-align: center;
+  height: fit-content;
+}
+.message-p p{
+margin-bottom: 0;
+}
+
+.username{
+  text-align: left;
+  font-size: 0.8em;
+  line-height: 0.8em;
+  padding-bottom: 0.2em;
+}
+
+  .sent {
+    flex-direction: row-reverse;
+  }
+  
+  .sent .message-p {
+    color: white;
+    background: #0b93f6;
+    align-self: flex-end;
+  }
+
+  .sent i{
+    padding-left: 0.2em;
+  }
+
+  .received .message-p {
+    background: #e5e5ea;
+    color: black;
+  }
+
+  .received i{
+    padding-left: 0.2em;
+  }
+
+  img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 2px 5px;
+  }
